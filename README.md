@@ -1,0 +1,2 @@
+# practise-localStorage
+Skapa en webbsida med ett enkelt inputfält och en knapp.  När besökaren skriver sitt namn i inputfältet så skall vi visa detta i ett nytt &lt;div> element på sidan.  Du skall sedan använda localStorage för att spara värdet besökaren har lämnat och vi skall kunna stänga ner webbläsaren och återkomma till sidan och vårat namn skall fortfarande vara utskrivet.  Har besökaren lämnat sitt namn, så skall det även finnas en "radera" knapp som tar bort värdet ur localStorage.
