@@ -1,1 +1,1 @@
-console.log(typeof "Hej världen! victor");
+console.log(typeof "Hej världen!");
