@@ -2,20 +2,21 @@
 console.log("Hej världen!");
 
 //Hämtar mina object från DOM
-let key = document.getElementById("iKey");
-let value = document.getElementById("iValue");
-let button = document.getElementById("iButtton");
+let inpName = document.getElementById("inpName");
+let btnInport = document.getElementById("btnInport");
+let oupDiv = document.getElementById("oupDiv");
 
-console.log();
+btnInport.addEventListener("click", function (params) {
+  //add to local storage
+  let inpValue = inpName.value;
+  localStorage.setItem("name", inpValue);
 
-function name(params) {
-  //skriv ut besökarens namn i nytt <div> element
-}
+  //Skriv ut objekt i ett eget <div>element
+  oupDiv.insertAdjacentHTML("afterbegin", `<div>${inpValue}</div><br>`);
+});
 
-function name(params) {
-  //Spara besökarens namn i lokalStorage
-}
-
-function name(params) {
-  //radera knapp som raderar sparat namn från lokalStorage
-}
+btnDelete.addEventListener("click", function () {
+  //raderar sparat namn från lokalStorage
+  localStorage.clear();
+  location.reload();
+});
