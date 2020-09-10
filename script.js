@@ -1,12 +1,17 @@
-//console.log för att se så att script-fil är kopplat med index-fil
-console.log("Hej världen!");
-
 //Hämtar mina object från DOM
 let inpName = document.getElementById("inpName");
 let btnInport = document.getElementById("btnInport");
 let oupDiv = document.getElementById("oupDiv");
 
-btnInport.addEventListener("click", function (params) {
+if (localStorage.length >= 1) {
+  //Skriv ut objekt i ett eget <div>element
+  oupDiv.insertAdjacentHTML(
+    "afterbegin",
+    `<div>${localStorage.getItem("name")}</div><br>`
+  );
+}
+
+btnInport.addEventListener("click", function () {
   //add to local storage
   let inpValue = inpName.value;
   localStorage.setItem("name", inpValue);
