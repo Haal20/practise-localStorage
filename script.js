@@ -3,6 +3,11 @@ let inpName = document.getElementById("inpName");
 let btnInport = document.getElementById("btnInport");
 let oupDiv = document.getElementById("oupDiv");
 
+//manipulerar delete-knapp i DOM
+let btnDelete = document.createElement("button");
+btnDelete.innerHTML = "Delete Information";
+btnDelete.setAttribute("id", "btnDelete");
+
 if (localStorage.length >= 1) {
   //Skriv ut objekt i ett eget <div>element
   oupDiv.insertAdjacentHTML(
@@ -18,6 +23,7 @@ btnInport.addEventListener("click", function () {
 
   //Skriv ut objekt i ett eget <div>element
   oupDiv.insertAdjacentHTML("afterbegin", `<div>${inpValue}</div><br>`);
+  oupDiv.appendChild(btnDelete);
 });
 
 btnDelete.addEventListener("click", function () {
